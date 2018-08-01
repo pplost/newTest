@@ -103,8 +103,19 @@ function numSeparator(num, len) {
     return result;
 }
 
-//字符串去空格
-String.prototype.Trim = function()    
-{    
-	return this.replace(/(^\s*)|(\s*$)/g, "");    
-}    
+//cookie
+
+function setCookie(name, value, expireTime = 365 * 24 * 60 * 60) {
+    var exp = new Date();
+    exp.setTime(exp.getTime() + expireTime * 1000);
+    document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=/";
+}
+
+function getCookie(name) {
+    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+    if (arr = document.cookie.match(reg)) {
+        return unescape(arr[2]);
+    } else {
+        return null;
+    }
+}

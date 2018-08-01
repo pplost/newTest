@@ -16,33 +16,18 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-			<div class="row-fluid">
-				<div class="span12">
-					<div class="navbar">
-						<div class="navbar-inner">
-							<div class="container-fluid">
-								 <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="#" class="brand">网站名</a>
-								<div class="nav-collapse navbar-responsive-collapse collapse">
-									<ul class="nav">
-										<li class="active">
-											<a href="#">主页</a>
-										</li>
-										<li>
-											<a href="#">链接</a>
-										</li>
-										<li>
-											<a href="#">链接</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="row">
+				<img src="https://v3.bootcss.com/assets/img/tanzhouedu.jpg" class="img-rounded" id="aaa"  style="display:none">
+				<input class="btn btn-primary" type="button" value="显示/隐藏" onclick="clickON()">
 			</div>
 		</div>	
 		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/title-link.js"></script>
+		<script>
+			function clickON(){
+				 $("#aaa").attr("style","display:block");
+			}
+		</script>
 	</body>
 </html>

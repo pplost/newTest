@@ -19,3 +19,11 @@
 .table-vertical-middle  tbody tr td{
 	vertical-align: middle;
 }
+
+.font-size-h1{
+	font-size:36px;
+}
+
+.font-size-h3{
+	font-size:24px;
+}
