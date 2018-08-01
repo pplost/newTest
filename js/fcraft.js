@@ -33,6 +33,7 @@ $(document).ready(function() {
     });
     sortStatus["servantID"] = true;
     picFlag = getCookie("fcraft-pic-flag");
+    //picFlag = true;
     createTableHead();
     createTableBody();
 });
