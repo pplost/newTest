@@ -20,6 +20,10 @@
     vertical-align: middle;
 }
 
+.table-text-center tr td {
+    text-align: center;
+}
+
 .font-size-h1 {
     font-size: 36px;
 }
