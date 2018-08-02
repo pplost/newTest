@@ -19,10 +19,10 @@ $("#show-pic-switch").bootstrapSwitch({
     size: "small",
     onSwitchChange: function(event, state) {
         if (state == true) {
-            setCookie("show-fcraft-pic", true);
+            setCookie("show-fcraft-pic", "true");
             picFlag = true;
         } else {
-            setCookie("show-fcraft-pic", false);
+            setCookie("show-fcraft-pic", "false");
             picFlag = false;
         }
         createTableHead();
@@ -51,7 +51,7 @@ $(document).ready(function() {
     });
     sortStatus["servantID"] = true;
     picFlag = getCookie("show-fcraft-pic");
-    if (picFlag) {
+    if (picFlag == "true") {
         $("#show-pic-switch").bootstrapSwitch('state', true);
     } else {
         createTableHead();
