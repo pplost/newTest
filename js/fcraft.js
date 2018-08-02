@@ -13,7 +13,7 @@ var sortStatus = {
     "rank6": false
 };
 var picFlag = false;
-$("[name='show-pic-switch']").bootstrapSwitch({
+$("#show-pic-switch").bootstrapSwitch({
     onText: "显示图片",
     offText: "隐藏图片",
     size: "small",
@@ -52,11 +52,11 @@ $(document).ready(function() {
     sortStatus["servantID"] = true;
     picFlag = getCookie("show-fcraft-pic");
     if (picFlag) {
-        $("[name='show-pic-switch']").attr('checked', true);
+        $("#show-pic-switch").bootstrapSwitch('state', true);
+    } else {
+        createTableHead();
+        createTableBody();
     }
-    //picFlag = true;
-    createTableHead();
-    createTableBody();
 });
 
 
