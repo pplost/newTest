@@ -113,7 +113,8 @@ function setCookie(name, value, expireTime = 365 * 24 * 60 * 60) {
 
 function getCookie(name) {
     var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-    if (arr = document.cookie.match(reg)) {
+    if (document.cookie.match(reg)) {
+        arr = document.cookie.match(reg);
         return unescape(arr[2]);
     } else {
         return null;

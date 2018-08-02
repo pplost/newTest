@@ -1,33 +1,83 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>test</title>
-		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/trash.css" type="text/css">
-		<style>
-			.img-fixed-size{
-				width:50px;
-				height:auto;
-			}
-		</style>
-	</head>
-	<body>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>羁绊礼装表</title>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/trash.css" type="text/css">
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
 		<div class="container-fluid">
-			<div class="row">
-				<img src="https://v3.bootcss.com/assets/img/tanzhouedu.jpg" class="img-rounded" id="aaa"  style="display:none">
-				<input class="btn btn-primary" type="button" value="显示/隐藏" onclick="clickON()">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				<!-- 标题 -->
+				<span class="navbar-brand" id="title-name"></span>
 			</div>
-		</div>	
-		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/title-link.js"></script>
-		<script>
-			function clickON(){
-				 $("#aaa").attr("style","display:block");
-			}
-		</script>
-	</body>
+			<!-- 导航页 -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav" id="title-link"></ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<table class="table table-bordered table-vertical-middle table-text-center">
+				<tbody class="cursor-default table-text-center" id="table-body">
+					<tr>
+						<td rowspan="4"><img src="http://img.fgowiki.com/fgo/head/002.jpg" style="width:96px"></td>
+						<td rowspan="3"><img src="http://cdn.fgowiki.com/fgo/equip/191.jpg" style="width:64px"></td>
+						<td>1-2</td>
+						<td>2-3</td>
+						<td>3-4</td>
+						<td>4-5</td>
+						<td>5-6</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>6-7</td>
+						<td>7-8</td>
+						<td>8-9</td>
+						<td>9-10</td>
+						<td>合计</td>
+					</tr>
+					<tr>
+						<td>星之王冠</td>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td rowspan="2">阿尔托莉雅·潘德拉贡</td>
+						<td rowspan="2" colspan="6">只有阿尔托莉雅·潘德拉贡(Saber)装备，且自身在场时，己方全体攻击力提升15%</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/trans-dicts.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/title-link.js"></script>
+</body>
+
 </html>

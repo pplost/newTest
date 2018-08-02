@@ -13,6 +13,24 @@ var sortStatus = {
     "rank6": false
 };
 var picFlag = false;
+$("[name='show-pic-switch']").bootstrapSwitch({
+    onText: "显示图片",
+    offText: "隐藏图片",
+    size: "small",
+    onSwitchChange: function(event, state) {
+        if (state == true) {
+            setCookie("show-fcraft-pic", true);
+            picFlag = true;
+        } else {
+            setCookie("show-fcraft-pic", false);
+            picFlag = false;
+        }
+        createTableHead();
+        createTableBody();
+    }
+
+});
+
 
 $(document).ready(function() {
     var data = readJson("data/data.json", "fgoArchiveMainDataVer", "fgoArchiveMainData");
@@ -32,7 +50,10 @@ $(document).ready(function() {
         }
     });
     sortStatus["servantID"] = true;
-    picFlag = getCookie("fcraft-pic-flag");
+    picFlag = getCookie("show-fcraft-pic");
+    if (picFlag) {
+        $("[name='show-pic-switch']").attr('checked', true);
+    }
     //picFlag = true;
     createTableHead();
     createTableBody();

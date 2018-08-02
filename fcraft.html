@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>羁绊礼装表</title>
 	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/bootstrap-switch/3.3.4/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/trash.css" type="text/css">
 </head>
 
@@ -31,21 +32,26 @@
 	</nav>
 
 	<div class="container">
-		<div class="row">
-			<table class="table table-striped table-bordered table-vertical-middle table-text-center">
-				<thead class="cursor-pointer table-text-center" id="table-head">
-				</thead>
-				<tbody class="cursor-default table-text-center" id="table-body">
-				</tbody>
-			</table>
+		<div>
+			<input type="checkbox" name="show-pic-switch">
 		</div>
-	</div>
-	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/trans-dicts.js"></script>
-	<script type="text/javascript" src="js/common.js"></script>
-	<script type="text/javascript" src="js/title-link.js"></script>
-	<script type="text/javascript" src="js/fcraft.js"></script>
+		<div class="row">
+			<div class="table-responsive">
+				<table class="table table-striped table-bordered vertical-middle text-center">
+					<thead class="cursor-pointer" id="table-head">
+					</thead>
+					<tbody class="cursor-default" id="table-body">
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-switch/3.3.4/js/bootstrap-switch.min.js"></script>
+		<script type="text/javascript" src="js/trans-dicts.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/title-link.js"></script>
+		<script type="text/javascript" src="js/fcraft.js"></script>
 </body>
 
 </html>

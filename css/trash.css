@@ -16,11 +16,11 @@
     margin-right: 0;
 }
 
-.table-vertical-middle thead tbody tr td {
+.vertical-middle, .vertical-middle thead tr th, .vertical-middle tbody tr td {
     vertical-align: middle;
 }
 
-.table-text-center tr td {
+.text-center th {
     text-align: center;
 }
 
