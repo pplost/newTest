@@ -1,4 +1,10 @@
 @charset "utf-8";
+@-moz-document url-prefix() {
+    fieldset {
+        display: table-cell;
+    }
+}
+
 .Y-center-block {
     position: absolute;
     top: 50%;

@@ -11,73 +11,41 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				<!-- 标题 -->
-				<span class="navbar-brand" id="title-name"></span>
-			</div>
-			<!-- 导航页 -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav" id="title-link"></ul>
-			</div>
-		</div>
-	</nav>
+	nav class="navbar navbar-default" role="navigation">
+   <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+           <span class="sr-only"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+       </button>
+   </div>
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+       <ul class="nav navbar-nav">
+           <li class="dropdown">
+               <a href="Area.html">成都市 <b class="glyphicon glyphicon-menu-down"></b></a>
+           </li>
+       </ul>
+       <form class="navbar-form navbar-left" role="search-box">
+           <input type="text" class="form-control"  onclick="javascript:window.location.href='Search.html';"  placeholder="职位搜索">
+       </form>
+       <ul class="nav navbar-nav navbar-right">
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">筛选<b class="glyphicon glyphicon-list"></b></a>
+           </li>
+       </ul>
+       <div class="clearfix"></div>
+   </div>
+</nav>
 
 	<div class="container">
-		<div class="row">
-			<table class="table table-bordered table-vertical-middle table-text-center">
-				<tbody class="cursor-default table-text-center" id="table-body">
-					<tr>
-						<td rowspan="4"><img src="http://img.fgowiki.com/fgo/head/002.jpg" style="width:96px"></td>
-						<td rowspan="3"><img src="http://cdn.fgowiki.com/fgo/equip/191.jpg" style="width:64px"></td>
-						<td>1-2</td>
-						<td>2-3</td>
-						<td>3-4</td>
-						<td>4-5</td>
-						<td>5-6</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>2</td>
-						<td>3</td>
-						<td>4</td>
-						<td>5</td>
-					</tr>
-					<tr>
-						<td>6-7</td>
-						<td>7-8</td>
-						<td>8-9</td>
-						<td>9-10</td>
-						<td>合计</td>
-					</tr>
-					<tr>
-						<td>星之王冠</td>
-						<td>1</td>
-						<td>2</td>
-						<td>3</td>
-						<td>4</td>
-						<td>5</td>
-					</tr>
-					<tr>
-						<td rowspan="2">阿尔托莉雅·潘德拉贡</td>
-						<td rowspan="2" colspan="6">只有阿尔托莉雅·潘德拉贡(Saber)装备，且自身在场时，己方全体攻击力提升15%</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+
 	</div>
 	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/trans-dicts.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
-	<script type="text/javascript" src="js/title-link.js"></script>
+	
 </body>
 
 </html>

@@ -52,7 +52,7 @@
      });
      sortStatus["servantID"] = true;
      picFlag = getCookie("show-fcraft-pic");
-     if (picFlag == true) {
+     if (picFlag) {
          $("#show-pic-switch").bootstrapSwitch('state', true);
      } else {
          createTableHead();
