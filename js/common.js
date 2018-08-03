@@ -1,3 +1,5 @@
+ /* jshint esversion: 6 */
+
 //数字前0填充
 function numLenFormat(num, length) {
     var s = Array(length).join(0) + num;
@@ -104,7 +106,6 @@ function numSeparator(num, len) {
 }
 
 //cookie
-
 function setCookie(name, value, expireTime = 365 * 24 * 60 * 60) {
     var exp = new Date();
     exp.setTime(exp.getTime() + expireTime * 1000);
@@ -115,7 +116,8 @@ function getCookie(name) {
     var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
     if (document.cookie.match(reg)) {
         arr = document.cookie.match(reg);
-        return unescape(arr[2]);
+        var res = arr[2] === "fasle" ? false : (arr[2] === "true" ? true : unescape(arr[2]));
+        return res;
     } else {
         return null;
     }

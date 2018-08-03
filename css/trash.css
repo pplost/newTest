@@ -39,3 +39,8 @@
 .cursor-default {
     cursor: default;
 }
+
+img.img-default-size {
+    width: 60px;
+    height: auto;
+}
