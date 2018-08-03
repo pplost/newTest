@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NP计算器</title>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/trash.css" type="text/css">
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				<!-- 标题 -->
+				<span class="navbar-brand" id="title-name"></span>
+			</div>
+			<!-- 导航页 -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav" id="title-link"></ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div>
+			</div>
+		</div>
+		<div class="row">
+			<div>
+				<div class="form-group col-xs-12">
+					<label class="sr-only" for="exampleInputEmail3">从者</label>
+					<div class="input-group">
+						<div class="input-group-addon">从者</div>
+						<select class="form-control" id="star">
+							</select>
+						<div class="input-group-addon">查询</div>
+						<input type="text" class="form-control" placeholder="名称或者别名">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div>
+			</div>
+		</div>
+		<div class="row">
+			<div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">红卡hit数</div>
+					<input type="number" min="1" value="1" class="form-control" readonly>
+				</div>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">蓝卡hit数</div>
+					<input type="number" min="1" value="1" class="form-control" readonly>
+				</div>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">绿卡hit数</div>
+					<input type="number" min="1" value="1" class="form-control" readonly>
+				</div>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">ex卡hit数</div>
+					<input type="number" min="1" value="1" class="form-control" readonly>
+				</div>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">宝具hit数</div>
+					<input type="number" min="0" value="1" class="form-control" readonly>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">红卡np率</div>
+					<input type="number" min="0" value="1" class="form-control" readonly>
+					<div class="input-group-addon">%</div>
+				</div>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">蓝卡np率</div>
+					<input type="number" min="0" value="1" class="form-control" readonly>
+					<div class="input-group-addon">%</div>
+				</div>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">绿卡np率</div>
+					<input type="number" min="0" value="1" class="form-control" readonly>
+					<div class="input-group-addon">%</div>
+				</div>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">ex卡np率</div>
+					<input type="number" min="0" value="1" class="form-control" readonly>
+					<div class="input-group-addon">%</div>
+				</div>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">宝具np率</div>
+					<input type="number" min="0" value="1" class="form-control" readonly>
+					<div class="input-group-addon">%</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">被动蓝魔放</div>
+					<input type="number" min="0" value="1" class="form-control" readonly>
+					<div class="input-group-addon">%</div>
+				</div>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">被动绿魔放</div>
+					<input type="number" min="0" value="1" class="form-control" readonly>
+					<div class="input-group-addon">%</div>
+				</div>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">被动np获取提升</div>
+					<input type="number" min="0" value="1" class="form-control" readonly>
+					<div class="input-group-addon">%</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">蓝魔放</div>
+					<input type="number" value="1" class="form-control">
+					<div class="input-group-addon">%</div>
+				</div>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">绿魔放</div>
+					<input type="number" value="1" class="form-control">
+					<div class="input-group-addon">%</div>
+				</div>
+			</div>
+			<div class="form-group col-xs-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">np获取提升</div>
+					<input type="number" value="1" class="form-control">
+					<div class="input-group-addon">%</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<form class="form-inline">
+				<div class="form-group">
+					<label class="sr-only" for="exampleInputEmail3">红卡hit数</label>
+					<div class="input-group">
+
+					</div>
+				</div>
+				</<form>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/trans-dicts.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/title-link.js"></script>
+</body>
+
+</html>
