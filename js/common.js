@@ -116,8 +116,14 @@
      var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
      if (document.cookie.match(reg)) {
          arr = document.cookie.match(reg);
-         var res = (arr[2] === "fasle") ? false : ((arr[2] === "true") ? true : unescape(arr[2]));
-         return res;
+         switch (arr[2]) {
+             case "true":
+                 return true;
+             case "false":
+                 return false;
+             default:
+                 return unescape(arr[2]);
+         }
      } else {
          return null;
      }
