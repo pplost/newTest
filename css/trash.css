@@ -50,3 +50,7 @@ img.img-default-size {
     width: 60px;
     height: auto;
 }
+
+.margin-left-10p {
+    margin-left: 10%;
+}

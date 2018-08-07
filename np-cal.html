@@ -14,7 +14,7 @@
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -24,128 +24,159 @@
 				<span class="navbar-brand" id="title-name"></span>
 			</div>
 			<!-- 导航页 -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
 				<ul class="nav navbar-nav" id="title-link"></ul>
 			</div>
 		</div>
 	</nav>
 	<div class="container-fluid">
-		<div class="row">
-			<div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="form-group col-xs-12">
-				<label class="sr-only" for="exampleInputEmail3">从者</label>
-				<div class="input-group">
-					<div class="input-group-addon">从者</div>
-					<select class="form-control" id="star">
+		<div class="navbar-collapse">
+			<div class="row">
+				<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+					<div class="input-group">
+						<div class="input-group-addon">从者</div>
+						<select class="form-control" id="servants">
 						</select>
-					<div class="input-group-addon">查询</div>
-					<input type="text" class="form-control" placeholder="名称或者别名">
+					</div>
+				</div>
+				<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+					<div class="input-group">
+						<div class="input-group-addon">查询</div>
+						<input type="text" class="form-control" placeholder="名称或者别名">
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="navbar-header visible-xs-block">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-area-1" aria-expanded="false">
+						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+				</button>
+			<span class="navbar-brand">Hits</span>
+		</div>
+		<div class="collapse navbar-collapse" id="collapse-area-1">
+			<div class="row">
+				<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="input-group">
+						<div class="input-group-addon">红卡hit数</div>
+						<input type="number" min="1" value="1" class="form-control" disabled>
+					</div>
+				</div>
+				<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="input-group">
+						<div class="input-group-addon">蓝卡hit数</div>
+						<input type="number" min="1" value="1" class="form-control" disabled>
+					</div>
+				</div>
+				<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="input-group">
+						<div class="input-group-addon">绿卡hit数</div>
+						<input type="number" min="1" value="1" class="form-control" disabled>
+					</div>
+				</div>
+				<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="input-group">
+						<div class="input-group-addon">ex卡hit数</div>
+						<input type="number" min="1" value="1" class="form-control" disabled>
+					</div>
+				</div>
+				<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="input-group">
+						<div class="input-group-addon">宝具hit数</div>
+						<input type="number" min="0" value="1" class="form-control" disabled>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="navbar-header visible-xs-block">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-area-2" aria-expanded="false">
+						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+				</button>
+			<span class="navbar-brand">NP率</span>
+		</div>
+		<div class="collapse navbar-collapse" id="collapse-area-2">
+			<div class="row">
+				<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="input-group">
+						<div class="input-group-addon">红卡np率</div>
+						<input type="number" min="0" value="1" class="form-control" disabled>
+						<div class="input-group-addon">%</div>
+					</div>
+				</div>
+				<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="input-group">
+						<div class="input-group-addon">蓝卡np率</div>
+						<input type="number" min="0" value="1" class="form-control" disabled>
+						<div class="input-group-addon">%</div>
+					</div>
+				</div>
+				<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="input-group">
+						<div class="input-group-addon">绿卡np率</div>
+						<input type="number" min="0" value="1" class="form-control" disabled>
+						<div class="input-group-addon">%</div>
+					</div>
+				</div>
+				<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="input-group">
+						<div class="input-group-addon">ex卡np率</div>
+						<input type="number" min="0" value="1" class="form-control" disabled>
+						<div class="input-group-addon">%</div>
+					</div>
+				</div>
+				<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="input-group">
+						<div class="input-group-addon">宝具np率</div>
+						<input type="number" min="0" value="1" class="form-control" disabled>
+						<div class="input-group-addon">%</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="navbar-header visible-xs-block">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-area-3" aria-expanded="false">
+						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+				</button>
+			<span class="navbar-brand">被动</span>
+		</div>
+		<div class="collapse navbar-collapse" id="collapse-area-3">
+			<div class="row">
+				<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="input-group">
+						<div class="input-group-addon">被动蓝魔放</div>
+						<input type="number" min="0" value="0" class="form-control" disabled>
+						<div class="input-group-addon">%</div>
+					</div>
+				</div>
+				<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="input-group">
+						<div class="input-group-addon">被动绿魔放</div>
+						<input type="number" min="0" value="0" class="form-control" disabled>
+						<div class="input-group-addon">%</div>
+					</div>
+				</div>
+				<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="input-group">
+						<div class="input-group-addon">被动np获取提升</div>
+						<input type="number" min="0" value="0" class="form-control" disabled>
+						<div class="input-group-addon">%</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
 		<div class="row">
 			<div>
 			</div>
 		</div>
-		<div class="row">
-			<div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="input-group">
-					<div class="input-group-addon">红卡hit数</div>
-					<input type="number" min="1" value="1" class="form-control" disabled>
-				</div>
-			</div>
-			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="input-group">
-					<div class="input-group-addon">蓝卡hit数</div>
-					<input type="number" min="1" value="1" class="form-control" disabled>
-				</div>
-			</div>
-			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="input-group">
-					<div class="input-group-addon">绿卡hit数</div>
-					<input type="number" min="1" value="1" class="form-control" disabled>
-				</div>
-			</div>
-			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="input-group">
-					<div class="input-group-addon">ex卡hit数</div>
-					<input type="number" min="1" value="1" class="form-control" disabled>
-				</div>
-			</div>
-			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="input-group">
-					<div class="input-group-addon">宝具hit数</div>
-					<input type="number" min="0" value="1" class="form-control" disabled>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="input-group">
-					<div class="input-group-addon">红卡np率</div>
-					<input type="number" min="0" value="1" class="form-control" disabled>
-					<div class="input-group-addon">%</div>
-				</div>
-			</div>
-			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="input-group">
-					<div class="input-group-addon">蓝卡np率</div>
-					<input type="number" min="0" value="1" class="form-control" disabled>
-					<div class="input-group-addon">%</div>
-				</div>
-			</div>
-			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="input-group">
-					<div class="input-group-addon">绿卡np率</div>
-					<input type="number" min="0" value="1" class="form-control" disabled>
-					<div class="input-group-addon">%</div>
-				</div>
-			</div>
-			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="input-group">
-					<div class="input-group-addon">ex卡np率</div>
-					<input type="number" min="0" value="1" class="form-control" disabled>
-					<div class="input-group-addon">%</div>
-				</div>
-			</div>
-			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="input-group">
-					<div class="input-group-addon">宝具np率</div>
-					<input type="number" min="0" value="1" class="form-control" disabled>
-					<div class="input-group-addon">%</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="input-group">
-					<div class="input-group-addon">被动蓝魔放</div>
-					<input type="number" min="0" value="0" class="form-control" disabled>
-					<div class="input-group-addon">%</div>
-				</div>
-			</div>
-			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="input-group">
-					<div class="input-group-addon">被动绿魔放</div>
-					<input type="number" min="0" value="0" class="form-control" disabled>
-					<div class="input-group-addon">%</div>
-				</div>
-			</div>
-			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="input-group">
-					<div class="input-group-addon">被动np获取提升</div>
-					<input type="number" min="0" value="0" class="form-control" disabled>
-					<div class="input-group-addon">%</div>
-				</div>
-			</div>
-		</div>
+
+
+
 		<div class="row">
 			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
 				<div class="input-group">
@@ -246,58 +277,54 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="row">
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
 				<div class="input-group ">
 					<div class="input-group-addon">首卡</div>
 					<select class="form-control">
-						<option value="1">其他 : 1</option>
-						<option value="1.2">死灵类 : 1.2</option>
+						<option value="-1" >无</option>
+						<option value="0">Buster</option>
+						<option value="3">Arts</option>
+						<option value="1">Quick</option>
+						<option value="-11">宝具</option>
+						<option value="-2">仅染色</option>
 					</select>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="form-group">
-					<label>
-						<input type="checkbox"> 次卡
-					</label>
-				</div>
-				<div class="form-group">
-					<div class="input-group">
-						<div class="input-group-addon">鞭尸hit数</div>
-						<input type="number" value="0" min="0" class="form-control">
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="form-group">
-					<label>
-						<input type="checkbox"> 尾卡
-					</label>
-				</div>
-				<div class="form-group">
-					<div class="input-group">
-						<div class="input-group-addon">鞭尸hit数</div>
-						<input type="number" value="0" min="0" class="form-control">
-					</div>
+			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">次卡</div>
+					<select class="form-control">
+						<option value="-1">无</option>
+						<option value="0">Buster</option>
+						<option value="4.5">Arts</option>
+						<option value="1.5">Quick</option>
+						<option value="-11">宝具</option>
+					</select>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="form-group">
-					<label>
-						<input type="checkbox"> ex
-					</label>
+			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group ">
+					<div class="input-group-addon">尾卡</div>
+					<select class="form-control">
+						<option value="-1">无</option>
+						<option value="0">Buster</option>
+						<option value="6">Arts</option>
+						<option value="2">Quick</option>
+						<option value="-11">宝具</option>
+					</select>
 				</div>
-				<div class="form-group">
-					<div class="input-group">
-						<div class="input-group-addon">鞭尸hit数</div>
-						<input type="number" value="0" min="0" class="form-control">
-					</div>
+			</div>
+			<div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-2">
+				<div class="input-group">
+					<div class="input-group-addon">ex</div>
+					<select class="form-control">
+						<option value="-1">无</option>
+						<option value="1">EX</option>
+					</select>
 				</div>
 			</div>
 		</div>
-
 		<div class="row">
 			<div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-3">
 				<div class="input-group">
@@ -322,16 +349,22 @@
 				</div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="text-center">
+				<div class="form-group">
+					<input class="btn btn-primary" type="button" value="计算" onclick="cal()">
+					<input class="btn btn-default margin-left-10p" type="button" value="列表" onclick="list()">
+				</div>
+			</div>
+		</div>
 	</div>
-	</div>
-
-
 
 	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/trans-dicts.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
 	<script type="text/javascript" src="js/title-link.js"></script>
+	<script type="text/javascript" src="js/np-cal.js"></script>
 </body>
 
 </html>

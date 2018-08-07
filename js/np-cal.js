@@ -9,7 +9,7 @@ $(function() {
             seq: seq,
             id: info["id"],
             name: servantNamesDict[info["svtId"]],
-            nickName: servantnickNamesDict[info["svtId"]] + ' ' + servantNamesDict[info["svtId"]],
+            nickName: servantnickNamesDict[info["svtId"]].toUpperCase() + ' ' + servantNamesDict[info["svtId"]],
             class: classNamesDict[info["class"]],
             busterCards: info["card"]["Buster"]["quantity"],
             busterHits: info["card"]["Buster"]["hits"],
@@ -137,7 +137,7 @@ function updateStatus(seq) {
 }
 //查询功能
 $("#search_str").on('input propertychange', function() {
-    var str = $("#search_str").val();
+    var str = $("#search_str").val().toUpperCase();
     var flag = true;
     var sid = 1;
     var lst = '';
