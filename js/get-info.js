@@ -450,7 +450,7 @@ function detailInfo() {
                     for (let z in master.mstTreasureDevice) {
                         if (master.mstTreasureDevice[z].id == master.mstSvtTreasureDevice[y].treasureDeviceId) {
 
-                            var npName = master.mstTreasureDevice[z].name.Trim();
+                            var npName = master.mstTreasureDevice[z].name.trim();
                             if (npName == "？？？") {
                                 break;
                             }
