@@ -1,3 +1,4 @@
+ /* jshint esversion: 6 */
 $(document).ready(function() {
     var pages = {
         ' ': '首页',
@@ -11,16 +12,16 @@ $(document).ready(function() {
     var page = window.location.pathname;
     page = page.split('/').slice(-1)[0];
     if (page == "index.html" || page == "") {
-        for (var i in pages) {
+        for (let i in pages) {
             if (i != " ") {
-                var e_li = $("<li></li>");
+                let e_li = $("<li></li>");
                 e_li.append('<a href="' + i + '">' + pages[i] + '</a>');
                 $("#contents").append(e_li);
             }
         }
     } else {
-        for (var i in pages) {
-            var e_li = $("<li></li>");
+        for (let i in pages) {
+            let e_li = $("<li></li>");
             e_li.append('<a href="./' + i.trim() + '">' + pages[i] + '</a>');
             if (page == i) {
                 e_li.addClass("active");

@@ -38,19 +38,19 @@
      $.each(data, function(i, inf) {
          if (inf.hasOwnProperty("friendship")) {
              var row = {
-                 id: numLenFormat(inf["friendship"]["id"], 3),
-                 name: inf["friendship"]["name"],
-                 servantID: numLenFormat(inf["id"], 3),
-                 servant: servantNamesDict[inf["svtId"]],
-                 desc: inf["friendship"]["desc"]
+                 id: numLenFormat(inf.friendship.id, 3),
+                 name: inf.friendship.name,
+                 servantID: numLenFormat(inf.id, 3),
+                 servant: servantNamesDict[inf.svtId],
+                 desc: inf.friendship.desc
              };
-             for (var j in inf["friendship"]["rank"]) {
-                 row["rank" + j] = numLenFormat(inf["friendship"]["rank"][j] * 1000, 6);
+             for (var j in inf.friendship.rank) {
+                 row["rank" + j] = numLenFormat(inf.friendship.rank[j] * 1000, 6);
              }
              info.push(row);
          }
      });
-     sortStatus["servantID"] = true;
+     sortStatus.servantID = true;
      picFlag = getCookie("show-fcraft-pic");
      if (picFlag) {
          $("#show-pic-switch").bootstrapSwitch('state', true);
@@ -67,24 +67,24 @@
      for (var i in info) {
          var trSty = "";
          var tdSty = "";
-         var clink = 'href="http://fgowiki.com/guide/equipdetail/' + info[i]["id"] + '"';
-         var slink = 'href="http://fgowiki.com/guide/petdetail/' + info[i]["servantID"] + '"';
+         var clink = 'href="http://fgowiki.com/guide/equipdetail/' + info[i].id + '"';
+         var slink = 'href="http://fgowiki.com/guide/petdetail/' + info[i].servantID + '"';
          var tr = $('<tr' + trSty + '></tr>');
-         var tds = '<td' + tdSty + '><a ' + clink + ' target="_blank">' + parseInt(info[i]["id"]) + '</a></td>';
+         var tds = '<td' + tdSty + '><a ' + clink + ' target="_blank">' + parseInt(info[i].id) + '</a></td>';
          if (picFlag) {
-             tds += '<td><a ' + clink + ' target="_blank"><img src="' + getPicUrl("craft", info[i]["id"]) + '" class="img-default-size"></a></td>';
+             tds += '<td><a ' + clink + ' target="_blank"><img src="' + getPicUrl("craft", info[i].id) + '" class="img-default-size"></a></td>';
          }
-         tds += '<td><a ' + clink + ' target="_blank">' + info[i]["name"] + '</a></td>';
+         tds += '<td><a ' + clink + ' target="_blank">' + info[i].name + '</a></td>';
          if (picFlag) {
-             tds += '<td><a ' + slink + ' target="_blank"><img src="' + getPicUrl("servant", info[i]["servantID"]) + '" class="img-default-size"></a></td>';
+             tds += '<td><a ' + slink + ' target="_blank"><img src="' + getPicUrl("servant", info[i].servantID) + '" class="img-default-size"></a></td>';
          } else {
-             tds += '<td><a ' + slink + ' target="_blank">' + parseInt(info[i]["servantID"]) + '</a></td>';
+             tds += '<td><a ' + slink + ' target="_blank">' + parseInt(info[i].servantID) + '</a></td>';
          }
-         tds += '<td><a ' + slink + ' target="_blank">' + info[i]["servant"] + '</a></td>';
+         tds += '<td><a ' + slink + ' target="_blank">' + info[i].servant + '</a></td>';
          for (var j = 0; j <= 6; j++) {
              tds += '<td>' + parseInt(info[i]["rank" + j]) / 1000 + '</td>';
          }
-         tds += '<td class="text-left">' + info[i]["desc"] + '</td>';
+         tds += '<td class="text-left">' + info[i].desc + '</td>';
          tr.append(tds);
          $("#table-body").append(tr);
      }
