@@ -434,11 +434,11 @@
              }
 
              //宝具
-             for (var y in master.mstSvtTreasureDevice) {
+             for (let y in master.mstSvtTreasureDevice) {
                  if (master.mstSvtTreasureDevice[y].svtId == master.mstSvt[x].id && 100 != master.mstSvtTreasureDevice[y].treasureDeviceId) {
                      var npLists = [];
                      let continueFlag = false;
-                     for (var z in noblePhantasmsWhiteList) {
+                     for (let z in noblePhantasmsWhiteList) {
                          if (noblePhantasmsWhiteList[z] == master.mstSvtTreasureDevice[y].treasureDeviceId) {
                              continueFlag = true;
                              break;
@@ -447,7 +447,7 @@
                      if (continueFlag) {
                          continue;
                      }
-                     for (var z in master.mstTreasureDevice) {
+                     for (let z in master.mstTreasureDevice) {
                          if (master.mstTreasureDevice[z].id == master.mstSvtTreasureDevice[y].treasureDeviceId) {
 
                              var npName = master.mstTreasureDevice[z].name.trim();
@@ -478,14 +478,14 @@
                                  console.log("------------npColor------------");
                                  console.log('collectionNo:', master.mstSvt[x].collectionNo, "servantID:", master.mstSvt[x].id, 'treasureDeviceId:', master.mstSvtTreasureDevice[y].treasureDeviceId, 'cardId:', master.mstSvtTreasureDevice[y].cardId);
                              }
-                             var l = [];
-                             for (var i in tdDetail) {
+                             let l = [];
+                             for (let i in tdDetail) {
                                  if (master.mstTreasureDevice[z].id == tdDetail[i][0]) {
                                      l = tdDetail[i].slice(0);
                                      break;
                                  }
                              }
-                             var t = [];
+
 
                              l[1] = l[1].replace(/ ＋ |　＋　/g, "＋");
                              l[1] = l[1].replace(/〔(.*?)〕/g, "($1)");
@@ -501,9 +501,9 @@
                                  npHits = 0;
                              }
                              len = l[1].split(/＆|＋/).length;
-                             var o = [];
-                             for (var i = 0; i < len; i++) {
-                                 var t = [];
+                             let o = [];
+                             for (let i = 0; i < len; i++) {
+                                 let t = [];
                                  t.push(l[1].split(/＆|＋/)[i]);
                                  t.push(l[i + 2]);
                                  o.push(t);
@@ -528,12 +528,12 @@
                  }
              }
              //技能
-             for (var y in master.mstSvtSkill) {
+             for (let y in master.mstSvtSkill) {
                  if (master.mstSvtSkill[y].svtId == master.mstSvt[x].id) {
                      var skillChargeTurn = "";
                      var skillName = "";
                      var skillIcoId = 0;
-                     for (var z in master.mstSkill) {
+                     for (let z in master.mstSkill) {
                          if (master.mstSvtSkill[y].skillId == master.mstSkill[z].id) {
                              skillName = master.mstSkill[z].name;
                              skillIcoId = master.mstSkill[z].iconId;
@@ -544,24 +544,24 @@
                              break;
                          }
                      }
-                     var ts = skillName.split(' ');
+                     let ts = skillName.split(' ');
                      if (ts.length > 1 && skillsDict[ts[0]]) {
                          skillName = skillsDict[ts[0]] + ' ' + ts[1];
                      } else if (skillsDict[skillName]) {
                          skillName = skillsDict[skillName];
                      } else {
                          console.log("------------skill------------");
-                         console.log('collectionNo:', master.mstSvt[x].collectionNo, "servantID:", master.mstSvt[x].id, 'skillId:', master.mstSvtSkill[y].skillId, 'name:', master.mstSkill[z].name);
+                         console.log('collectionNo:', master.mstSvt[x].collectionNo, "servantID:", master.mstSvt[x].id, 'skillId:', master.mstSvtSkill[y].skillId, 'name:', skillName);
                      }
 
-                     for (var i in master.mstSkillLv) {
+                     for (let i in master.mstSkillLv) {
                          if (master.mstSvtSkill[y].skillId == master.mstSkillLv[i].skillId && 1 == master.mstSkillLv[i].lv) {
                              skillChargeTurn = master.mstSkillLv[i].chargeTurn;
                              break;
                          }
                      }
-                     var l = [];
-                     for (var i in skDetail) {
+                     let l = [];
+                     for (let i in skDetail) {
                          if (master.mstSvtSkill[y].skillId == skDetail[i][0]) {
                              l = skDetail[i].slice(0);
                              break;
@@ -576,9 +576,9 @@
                      l[1] = l[1].replace(/<a.*?>(.*?)\(?(.*?)\)?(.*?)<\/a>/g, "$1$2$3");
                      l[2] = l[2].replace(/<a.*?>(.*?)\(?(.*?)\)?(.*?)<\/a>/g, "$1$2$3");
                      len = l[1].split(/＆|＋/).length;
-                     var o = [];
-                     for (var i = 0; i < len; i++) {
-                         var t = [];
+                     let o = [];
+                     for (let i = 0; i < len; i++) {
+                         let t = [];
                          t.push(l[1].split(/＆|＋/)[i]);
                          t.push(l[i + 2]);
                          o.push(t);
@@ -596,9 +596,9 @@
              }
              //被动
              if (master.mstSvt[x].classPassive.length != 0) {
-                 for (var y in master.mstSvt[x].classPassive) {
+                 for (let y in master.mstSvt[x].classPassive) {
                      let continueFlag = false;
-                     for (var z in passiveSkillsWhiteList) {
+                     for (let z in passiveSkillsWhiteList) {
                          if (passiveSkillsWhiteList[z] == master.mstSvt[x].classPassive[y]) {
                              continueFlag = true;
                              break;
@@ -609,7 +609,7 @@
                      }
                      var pSkillName = "";
                      var pSkillIcoId = 0;
-                     for (var i in master.mstSkill) {
+                     for (let i in master.mstSkill) {
                          if (master.mstSvt[x].classPassive[y] == master.mstSkill[i].id) {
                              pSkillName = master.mstSkill[i].name;
                              pSkillIcoId = master.mstSkill[i].iconId;
@@ -621,7 +621,7 @@
                          }
                      }
 
-                     var ts = pSkillName.split(' ');
+                     let ts = pSkillName.split(' ');
                      if (ts.length > 1 && passiveSkillsDict[ts[0]]) {
 
                          pSkillName = passiveSkillsDict[ts[0]] + ' ' + ts[1];
@@ -631,8 +631,8 @@
                          console.log("------------Passive Skill------------");
                          console.log('collectionNo:', master.mstSvt[x].collectionNo, "servantID:", master.mstSvt[x].id, 'skillId:', master.mstSvt[x].classPassive[y], 'SkillName:', pSkillName);
                      }
-                     var l = [];
-                     for (var i in skDetail) {
+                     let l = [];
+                     for (let i in skDetail) {
                          if (master.mstSvt[x].classPassive[y] == skDetail[i][0]) {
                              l = skDetail[i].slice(0);
                              break;
@@ -646,9 +646,9 @@
                      l[1] = l[1].replace(/Critical/g, "暴击");
 
                      len = l[1].split(/＆|＋/).length;
-                     var o = [];
-                     for (var i = 0; i < len; i++) {
-                         var t = [];
+                     let o = [];
+                     for (let i = 0; i < len; i++) {
+                         let t = [];
                          t.push(l[1].split(/＆|＋/)[i]);
                          t.push(l[i + 2]);
                          o.push(t);
